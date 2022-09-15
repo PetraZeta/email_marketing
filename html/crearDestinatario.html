@@ -1,0 +1,154 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModeloVistaControlador</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/8682e22814.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid bg-light">
+        <div class="container">
+            <ul class="nav nav-justified py-3 nav-pills">
+               <li class="nav-item ">
+                       <a href="index.html" class="nav-link ">Inicio</a>
+                       </li>
+                <li class="nav-item ">
+                  <div class="btn-group">
+                    <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Destinatarios
+                     </button>
+                    <ul class="dropdown-menu">
+                     
+                      <li class="nav-item">
+                       <a href="crearDestinatario.html" class="nav-link ">Nuevo Destinatario</a>
+                      </li>
+                          <li class="nav-item">
+                       <a href="listaDestinos.html" class="nav-link ">Lista</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+          
+                <li class="nav-item">
+                <div class="btn-group">
+                  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Campañas
+                  </button>
+                  <ul class="dropdown-menu">
+                 <li class="nav-item">
+          
+                  <a href="nuevaCampaigns.html" class="nav-link ">Nueva Campaña</a>
+                 </li>
+                 </ul>
+                </div>
+                 </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link ">Salir</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h1 class="text-center my-5 titulo">Ingresar nuevo destinatario</h1>
+    <div class="container mt-5 ">
+        <div id="contenido" class="row">
+            <div class="col-md-10 m-auto agregar-destinatario card">
+                <form id="nuevo-destino">
+                    <legend class="mb-4">Datos del Destinatario</legend>
+                    <div class="form-group row mb-3">
+                        <label class="col-sm-4 col-lg-4 col-form-label ">Nombre:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre/Razón Social ">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Sector:</label>
+                        <div class="col-sm-8 col-lg-8">
+                          <select name="sector" id="sector" class="form-control" >
+                            <option selected>Elige...</option>
+                            <option value="e">Empresa Privada</option>
+                            <option value="a">Administración Pública</option>
+                            <option value="p">Persona Física</option>
+
+                          </select>
+                    
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Email:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="email" id="email" name="email" class="form-control"  placeholder="Correo Electrónico">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Localidad:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="localidad" name="localidad" class="form-control" placeholder="Localidad">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label class="col-sm-4 col-lg-4 col-form-label">C.P.:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="cp" name="cp" class="form-control" placeholder="Código Postal">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Provincia:</label>
+                        <div class="col-sm-8 col-lg-8">
+                                <input type="text" id="provincia" name="provincia" class="form-control" placeholder="Provincia">
+                            <!-- <textarea id="sintomas" name="sintomas" class="form-control"></textarea> -->
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                            <button type="submit" class="btn btn-success w-100 d-block">Crear Nuevo Destinatario</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+
+
+
+<table class="table table-bordered">
+      <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Sertor</th>
+            <th>Email</th>
+            <th>Localidad</th>
+            <th>CP</th>
+            <th>Ciudad</th>
+            <th>Acciones</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>John</td>
+              <td>Empresa</td>
+              <td>Moda</td>
+              <td>john@example.com</td>
+              <td>Cáceres</td>
+              <td>10001</td>
+              <td>Cáceres</td>
+
+                 <td>
+                <a href="" class="btn btn-secondary"><i class="fas fa-marker"></i></a>
+                <a href="" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+              </td>
+          </tr>
+    
+      </tbody>
+  </table>
+
+</body>
+
+</html>
