@@ -18,8 +18,8 @@ define("DB_USER", "root");
 define("DB_PASS", "");
 define("DB_NAME", "email_marketing");
 ////PHPMailer
-define('PHPMAILER_HOST', 'smtp.gmail.com');
-define('PHPMAILER_USER', 'inesgarza01@gmail.com');
-define('PHPMAILER_PASS', 'yokse1234');
-define('PHPMAILER_PORT', 465);
+define('PHPMAILER_HOST', '');
+define('PHPMAILER_USER', '');
+define('PHPMAILER_PASS', '');
+define('PHPMAILER_PORT', );
 
